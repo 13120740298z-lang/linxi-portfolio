@@ -4,22 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>林熙 · 视觉 / 交互 / 装置</title>
-<meta name="description" content="林熙，视觉与交互设计。把电、噪声和排版放在一起，直到它们安静下来。">
+<meta name="description" content="林熙，上海电力大学。视觉与交互设计。把电、噪声和排版放在一起，直到它们安静下来。">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
 <div class="grain" aria-hidden="true"></div>
 <div class="scanlines" aria-hidden="true"></div>
 <div class="lens" id="lens" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true"><span>×</span></div>
 
 <header class="bar">
-  <a class="mark" href="#top">林熙<span class="mark-dot"></span><span class="mark-latin">LIN XI</span></a>
-  <p class="bar-meta">视觉 / 交互 / 装置</p>
-  <p class="bar-meta right">上海 · 31.2°N 121.5°E</p>
+  <a class="mark" href="index.html">林熙<span class="mark-dot"></span><span class="mark-latin">LIN XI</span></a>
+  <nav class="nav">
+    <a href="index.html" data-nav="home">首页</a>
+    <a href="works.html" data-nav="works">作品</a>
+    <a href="playground.html" data-nav="play">实验场</a>
+    <a href="about.html" data-nav="about">关于</a>
+    <a href="contact.html" data-nav="contact">联系</a>
+  </nav>
+  <p class="bar-meta">上海 · 31.2°N 121.5°E</p>
 </header>
 
-<main id="top">
+<main>
 
   <!-- ========== HERO ========== -->
   <section class="hero">
@@ -41,7 +47,7 @@
       </svg>
       <svg class="hero-wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
         <path id="wave-a" d="" fill="none" stroke="currentColor" stroke-width="2"/>
-        <path id="wave-b" d="" fill="none" stroke="currentColor" stroke-width="1" opacity=".4"/>
+        <path id="wave-b" d="" fill="none" stroke="currentColor" stroke-width="1" opacity=".35"/>
       </svg>
     </div>
 
@@ -58,63 +64,64 @@
           <span>电压稳定 · 排版不稳定 · 手比脑子慢半秒 · 不要渐变 · 不要居中对齐 · 让字压在图形上 · </span>
         </div>
       </div>
-      <span class="mono">01 / 04</span>
+      <span class="mono">01 / 06</span>
     </div>
   </section>
 
-  <!-- ========== WORKS ========== -->
-  <section class="works" id="works">
-    <div class="sec-head">
-      <h2 class="sec-title" data-split>选作</h2>
-      <span class="sec-num mono">02 — SELECTED WORKS</span>
-      <p class="sec-note">七件。按做的时间排，不按重要性。</p>
+  <!-- ========== FEATURED ========== -->
+  <section class="page">
+    <div class="page-head">
+      <span class="mono">02 — SELECTED / 三件</span>
+      <h2 class="page-title">被留下的三件</h2>
+      <p class="page-lead">七件里挑三件，每件都留了过程：草图、失败的那版、最后挂上墙的那版。</p>
     </div>
-    <ol class="work-list" id="work-list"></ol>
-    <p class="work-hint mono">悬停看图形 · 点击看注释</p>
-  </section>
-
-  <!-- ========== HONORS ========== -->
-  <section class="honors" id="honors">
-    <div class="sec-head">
-      <h2 class="sec-title" data-split>履历</h2>
-      <span class="sec-num mono">03 — INDEX</span>
-      <p class="sec-note">都很小。小才留得住。</p>
-    </div>
-    <div class="honor-list" id="honor-list"></div>
+    <ol class="work-list">
+      <li class="work"><a class="work-row" href="work-sunset.html">
+        <span class="work-no">01</span>
+        <h3 class="work-title">第三百次日落</h3>
+        <span class="work-meta"><i>装置</i><br><i>亚克力 / LED / 程序</i></span>
+        <span class="work-year">2025</span>
+      </a></li>
+      <li class="work"><a class="work-row" href="work-garden.html">
+        <span class="work-no">03</span>
+        <h3 class="work-title">静电花园</h3>
+        <span class="work-meta"><i>交互装置</i><br><i>静电感应 / 棉布</i></span>
+        <span class="work-year">2024</span>
+      </a></li>
+      <li class="work"><a class="work-row" href="work-noise.html">
+        <span class="work-no">04</span>
+        <h3 class="work-title">把噪声折叠</h3>
+        <span class="work-meta"><i>丝网印</i><br><i>六色 / 手工套印</i></span>
+        <span class="work-year">2024</span>
+      </a></li>
+    </ol>
+    <p class="work-hint mono"><a href="works.html">全部七件 →</a></p>
   </section>
 
   <!-- ========== STATEMENT ========== -->
-  <section class="statement" id="statement">
-    <span class="quote-mark" aria-hidden="true">“</span>
+  <section class="statement">
     <p class="statement-body">
-      <span class="line">我做的不是界面，</span>
-      <span class="line">是让人停半秒的<em>停顿</em>。</span>
-      <span class="block" aria-hidden="true"></span>
-      <span class="line small">电是快的，纸是慢的。我一直在中间找那个不快不慢的位置。</span>
+      我做的不是界面，<br>
+      是让人停半秒的<em>停顿</em>。
     </p>
-    <p class="statement-sign mono">林熙 · 2025 春 · 上海</p>
+    <p class="statement-sign">电是快的，纸是慢的。我一直在中间找那个不快不慢的位置。<br>林熙 · 2025 春 · 上海</p>
   </section>
 
   <!-- ========== CONTACT ========== -->
-  <section class="contact" id="contact">
-    <div class="contact-head">
-      <span class="mono">04 — CONTACT</span>
-      <p>合作、展览、或者只是聊两句。</p>
+  <section class="page">
+    <div class="page-head">
+      <span class="mono">05 — CONTACT</span>
+      <h2 class="page-title">说两句</h2>
+      <p class="page-lead">合作、展览，或者只是问我那个盒子为什么第三百天才亮。</p>
     </div>
-    <a class="contact-mail" href="mailto:xi@linxi.works">XI<wbr>@LINXI.WORKS</a>
-    <div class="contact-foot">
-      <span>上海电力大学 · 视觉传达设计</span>
-      <span>不接加急，不改第七版。</span>
-    </div>
+    <a class="contact-mail" href="contact.html">联系 →</a>
   </section>
 
   <footer class="footer">
-    <span>© 2025 林熙</span>
-    <span>本站全部图形由 SVG / CSS 现场生成，无外链图片。</span>
+    <span>© 2025 林熙 · 上海</span>
+    <span>本站全部图形由 SVG / Canvas 现场生成，无外链图片。</span>
   </footer>
 </main>
-
-<div class="preview" id="preview" aria-hidden="true"><div class="preview-inner" id="preview-inner"></div></div>
 
 <script src="app.js"></script>
 </body>
