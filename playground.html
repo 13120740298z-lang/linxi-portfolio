@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>实验场 · 林熙</title>
+<meta name="description" content="四个能动手的小玩具：卡片堆、乱码解码、网点、可调波形。鼠标和触屏都能用。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="play">
+<div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="lens" id="lens" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span>×</span></div>
+
+<header class="bar">
+  <a class="mark" href="index.html">林熙<span class="mark-dot"></span><span class="mark-latin">LIN XI</span></a>
+  <nav class="nav">
+    <a href="index.html" data-nav="home">首页</a>
+    <a href="works.html" data-nav="works">作品</a>
+    <a href="playground.html" data-nav="play">实验场</a>
+    <a href="about.html" data-nav="about">关于</a>
+    <a href="contact.html" data-nav="contact">联系</a>
+  </nav>
+  <p class="bar-meta">PLAYGROUND · 04</p>
+</header>
+
+<main>
+  <section class="page">
+    <div class="page-head">
+      <span class="mono">03 — PLAYGROUND</span>
+      <h1 class="page-title">实验场</h1>
+      <p class="page-lead">四个能动手的玩意儿，都是画稿画不下去的时候做的。桌面用鼠标，手机用手指，都能用。</p>
+    </div>
+
+    <div class="toy-grid">
+
+      <!-- 01 卡片堆 -->
+      <article class="toy rv">
+        <div class="toy-head"><h2 class="toy-title">拖开的五层</h2><span class="toy-no">01</span></div>
+        <p class="toy-desc">按住最上面那张卡片往外拖，下一层就露出来。五层拖完可以重来。</p>
+        <div class="toy-stage">
+          <div class="stack" id="stack">
+            <div class="card" data-rot="-9"><span>01</span><span>按住我拖</span></div>
+            <div class="card" data-rot="-4"><span>02</span><span>电从这里进来</span></div>
+            <div class="card" data-rot="3"><span>03</span><span>字开始不稳</span></div>
+            <div class="card" data-rot="8"><span>04</span><span>一点噪声</span></div>
+            <div class="card" data-rot="-12"><span>05</span><span>见底了</span></div>
+          </div>
+        </div>
+        <div class="toy-note"><span id="stack-tip">按住卡片往外拖 →</span><button class="toy-btn" id="stack-reset">再来一次</button></div>
+      </article>
+
+      <!-- 02 解码 -->
+      <article class="toy rv">
+        <div class="toy-head"><h2 class="toy-title">划过的字会回来</h2><span class="toy-no">02</span></div>
+        <p class="toy-desc">一段被打乱的话。鼠标或手指划过的地方，乱码会一个字一个字还原。</p>
+        <div class="toy-stage">
+          <div class="decode" id="decode">这不是乱码，是还没被读到的句子。把光标挪过来，字会一个一个回来。留在这里的，都曾经是真的。</div>
+        </div>
+        <div class="toy-note"><span>划过即解码 · 触摸也行</span><button class="toy-btn" id="decode-reset">重新打乱</button></div>
+      </article>
+
+      <!-- 03 网点 -->
+      <article class="toy rv">
+        <div class="toy-head"><h2 class="toy-title">网点会跟着手变</h2><span class="toy-no">03</span></div>
+        <p class="toy-desc">左右移动改网点的角度，上下移动改密度。越靠近指针，点越大。</p>
+        <div class="toy-stage">
+          <div class="dots-stage">
+            <canvas id="dots"></canvas>
+            <span class="dots-read" id="dots-read">密度 16 px · 角度 90°</span>
+            <span class="dots-hint">左右定角度 · 上下定密度</span>
+          </div>
+        </div>
+        <div class="toy-note"><span>指针停在画面上才算</span><button class="toy-btn" id="dots-reset">归位</button></div>
+      </article>
+
+      <!-- 04 波形 -->
+      <article class="toy rv">
+        <div class="toy-head"><h2 class="toy-title">三条可以调的波</h2><span class="toy-no">04</span></div>
+        <p class="toy-desc">三个滑块改频率、幅度和速度。速度拉到 0 就停住，不会自己跑。</p>
+        <div class="toy-stage">
+          <div class="wave-stage"><canvas id="wave"></canvas></div>
+          <div class="controls">
+            <label class="ctrl">频率 <input id="w-freq" type="range" min="0.5" max="9" step="0.1" value="3"><b id="w-freq-v">3.0</b></label>
+            <label class="ctrl">幅度 <input id="w-amp" type="range" min="6" max="58" step="1" value="30"><b id="w-amp-v">30</b></label>
+            <label class="ctrl">速度 <input id="w-speed" type="range" min="0" max="2" step="0.05" value="0.6"><b id="w-speed-v">0.60</b></label>
+          </div>
+        </div>
+        <div class="toy-note"><span>参数可调 · 速度 0 即静止</span><button class="toy-btn" id="wave-pause">暂停</button></div>
+      </article>
+
+    </div>
+
+    <div class="egg">
+      <button id="egg-btn">长按 1.5 秒</button>
+      <span class="egg-out" id="egg-out">或者，在键盘上连按三次 L。</span>
+    </div>
+
+    <p class="work-hint mono" style="margin-top:22px"><a href="works.html">← 回作品索引</a></p>
+  </section>
+
+  <footer class="footer">
+    <span>© 2025 林熙 · 上海</span>
+    <span>四个玩具，没有一个是自动播放的。</span>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
