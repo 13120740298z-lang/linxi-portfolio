@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>林熙 · 视觉 / 交互 / 装置</title>
+<meta name="description" content="林熙，视觉与交互设计。把电、噪声和排版放在一起，直到它们安静下来。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="lens" id="lens" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span>×</span></div>
+
+<header class="bar">
+  <a class="mark" href="#top">林熙<span class="mark-dot"></span><span class="mark-latin">LIN XI</span></a>
+  <p class="bar-meta">视觉 / 交互 / 装置</p>
+  <p class="bar-meta right">上海 · 31.2°N 121.5°E</p>
+</header>
+
+<main id="top">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <span>PORTFOLIO — 2023 / 2025</span>
+      <span>上海电力大学 · 视觉传达</span>
+    </div>
+
+    <div class="hero-stage">
+      <span class="hero-ghost" aria-hidden="true">林熙</span>
+      <h1 class="hero-name" data-split>林熙</h1>
+      <span class="hero-latin" aria-hidden="true">LIN<br>XI</span>
+      <svg class="hero-dial" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 7"/>
+        <path d="M14 100h172" stroke="currentColor" stroke-width="1"/>
+        <path d="M100 14v172" stroke="currentColor" stroke-width="1" stroke-dasharray="2 6"/>
+        <circle cx="100" cy="14" r="5" fill="currentColor"/>
+      </svg>
+      <svg class="hero-wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path id="wave-a" d="" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path id="wave-b" d="" fill="none" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      </svg>
+    </div>
+
+    <p class="hero-claim">
+      <span>把电、噪声和排版放在一起，</span>
+      <span>直到它们<em>安静</em>下来。</span>
+    </p>
+
+    <div class="hero-foot">
+      <span class="mono">SCROLL ↓</span>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
+          <span>电压稳定 · 排版不稳定 · 手比脑子慢半秒 · 不要渐变 · 不要居中对齐 · 让字压在图形上 · </span>
+          <span>电压稳定 · 排版不稳定 · 手比脑子慢半秒 · 不要渐变 · 不要居中对齐 · 让字压在图形上 · </span>
+        </div>
+      </div>
+      <span class="mono">01 / 04</span>
+    </div>
+  </section>
+
+  <!-- ========== WORKS ========== -->
+  <section class="works" id="works">
+    <div class="sec-head">
+      <h2 class="sec-title" data-split>选作</h2>
+      <span class="sec-num mono">02 — SELECTED WORKS</span>
+      <p class="sec-note">七件。按做的时间排，不按重要性。</p>
+    </div>
+    <ol class="work-list" id="work-list"></ol>
+    <p class="work-hint mono">悬停看图形 · 点击看注释</p>
+  </section>
+
+  <!-- ========== HONORS ========== -->
+  <section class="honors" id="honors">
+    <div class="sec-head">
+      <h2 class="sec-title" data-split>履历</h2>
+      <span class="sec-num mono">03 — INDEX</span>
+      <p class="sec-note">都很小。小才留得住。</p>
+    </div>
+    <div class="honor-list" id="honor-list"></div>
+  </section>
+
+  <!-- ========== STATEMENT ========== -->
+  <section class="statement" id="statement">
+    <span class="quote-mark" aria-hidden="true">“</span>
+    <p class="statement-body">
+      <span class="line">我做的不是界面，</span>
+      <span class="line">是让人停半秒的<em>停顿</em>。</span>
+      <span class="block" aria-hidden="true"></span>
+      <span class="line small">电是快的，纸是慢的。我一直在中间找那个不快不慢的位置。</span>
+    </p>
+    <p class="statement-sign mono">林熙 · 2025 春 · 上海</p>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="contact-head">
+      <span class="mono">04 — CONTACT</span>
+      <p>合作、展览、或者只是聊两句。</p>
+    </div>
+    <a class="contact-mail" href="mailto:xi@linxi.works">XI<wbr>@LINXI.WORKS</a>
+    <div class="contact-foot">
+      <span>上海电力大学 · 视觉传达设计</span>
+      <span>不接加急，不改第七版。</span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2025 林熙</span>
+    <span>本站全部图形由 SVG / CSS 现场生成，无外链图片。</span>
+  </footer>
+</main>
+
+<div class="preview" id="preview" aria-hidden="true"><div class="preview-inner" id="preview-inner"></div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
